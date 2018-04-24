@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gFu-84-k1H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City Weather-->
+        <scene sceneID="imR-WA-Qbu">
+            <objects>
+                <tableViewController id="56E-k4-h2I" customClass="WeatherTableViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="OdQ-M6-IxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Stillwater" id="b28-iF-kFA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="nlc-WW-Csp" customClass="TableViewCell" customModule="SwiftWeather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nlc-WW-Csp" id="7w9-q1-Ter">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DBr-n6-ZVe">
+                                            <rect key="frame" x="197" y="11" width="60" height="60"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-8V-9Rg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzW-3N-htF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="Cz9-pm-pXl"/>
+                                                                <constraint firstAttribute="width" constant="60" id="hhI-dH-8fD"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7py-0X-UtS">
+                                            <rect key="frame" x="296" y="11" width="63" height="53"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0sY-LL-r6h">
+                                            <rect key="frame" x="27" y="11" width="60" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-xi-Hn2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="53"/>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-5S-aR3">
+                                            <rect key="frame" x="16" y="11" width="100" height="53"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="D3v-5S-aR3" secondAttribute="height" multiplier="124:53" id="6cG-HW-2AR"/>
+                                                <constraint firstAttribute="width" constant="110" id="DJ2-vb-Yev"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Tbg-7d-gKF"/>
+                                                <constraint firstAttribute="width" secondItem="D3v-5S-aR3" secondAttribute="height" multiplier="60:53" id="Y6c-23-JsY"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="at8-rG-FOh"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="124" id="ek6-Mc-uWo"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="exp-5Z-aUg"/>
+                                                <constraint firstAttribute="height" constant="53" id="veh-Cd-Fu2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7py-0X-UtS" firstAttribute="top" secondItem="7w9-q1-Ter" secondAttribute="topMargin" id="70o-b2-wf4"/>
+                                        <constraint firstItem="7py-0X-UtS" firstAttribute="leading" secondItem="DBr-n6-ZVe" secondAttribute="trailing" constant="75" id="CPa-Oe-KLq"/>
+                                        <constraint firstItem="7py-0X-UtS" firstAttribute="leading" secondItem="DBr-n6-ZVe" secondAttribute="trailing" constant="75" id="DQK-qj-1uj"/>
+                                        <constraint firstItem="7py-0X-UtS" firstAttribute="leading" secondItem="DBr-n6-ZVe" secondAttribute="trailing" constant="60" id="NT6-8N-G4a"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7py-0X-UtS" secondAttribute="trailing" id="PDh-Fl-AHs"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7py-0X-UtS" secondAttribute="bottom" id="X7A-nV-bXo"/>
+                                        <constraint firstItem="D3v-5S-aR3" firstAttribute="leading" secondItem="7w9-q1-Ter" secondAttribute="leadingMargin" id="lyi-Jd-GMm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.60448295350000003" green="0.92962968359999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="artistImageView" destination="hzW-3N-htF" id="OLF-A2-y70"/>
+                                    <outlet property="dayLabel" destination="D3v-5S-aR3" id="R2o-Yz-1bd"/>
+                                    <outlet property="tempLabel" destination="7py-0X-UtS" id="kgj-sm-U3s"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="56E-k4-h2I" id="9ed-Yu-RIs"/>
+                            <outlet property="delegate" destination="56E-k4-h2I" id="gNY-Bj-pB8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="City Weather" id="YPc-Ar-Yiv"/>
+                    <connections>
+                        <outlet property="searchBar" destination="b28-iF-kFA" id="fEd-9g-btX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0O-ft-y8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dzc-9k-jFb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gFu-84-k1H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wzo-8T-WNn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="56E-k4-h2I" kind="relationship" relationship="rootViewController" id="okh-Lr-6gD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aab-Tm-cBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+</document>
